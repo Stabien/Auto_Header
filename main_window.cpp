@@ -62,14 +62,14 @@ void mainWindow::pathFileWindow()
 
     folder_path_name = folder_path.getExistingDirectory(this, tr("Open a directory"), "c://", QFileDialog::ShowDirsOnly);
     m_name_folder->setText(folder_path_name);
-
 }
 
 void mainWindow::generate()
 {
-    if (m_name->text() != NULL && m_name_folder->text() != NULL) {
+    if (m_name->text() != NULL && m_name_folder->text() != NULL)
         mainWindow::call_generation();
-    }
+    else if (m_name->text() == NULL)
+        QMessageBox::critical(this, "", "Error : the name of the file is not specified");
     else
-        cout << "error" << endl;
+        QMessageBox::critical(this, "", "Error : the path of the folder is not specified");
 }
