@@ -31,9 +31,8 @@ void mainWindow::c_generation()
     if(test_my_file)
         answer = QMessageBox::question(this, "", "this file already exist, if you continue it will be crushed, do you want to continue ? ", QMessageBox::Yes | QMessageBox::No);
 
-    ofstream my_file(complete_file_path.c_str());
-
-    if (my_file && answer != QMessageBox::No) {
+    if (answer != QMessageBox::No) {
+        ofstream my_file(complete_file_path.c_str());
         my_file << "#include <stdio.h>\n#include <stdlib.h>" << "\n" << endl;
         my_file << "int main(int argc, char* argv[])\n{\n    return (0);\n}";
         QMessageBox::information(this, "", "Successful Generation !");
@@ -58,9 +57,8 @@ void mainWindow::cpp_generation()
     if(test_my_file)
         answer = QMessageBox::question(this, "", "this file already exist, if you continue it will be crushed, do you want to continue ? ", QMessageBox::Yes | QMessageBox::No);
 
-    ofstream my_file(complete_file_path.c_str());
-
-    if (my_file && answer != QMessageBox::No) {
+    if (answer != QMessageBox::No) {
+        ofstream my_file(complete_file_path.c_str());
         my_file << "#include <iostream>\n#include <string>" << "\n" << endl;
         my_file << "int main(int argc, char* argv[])\n{\n    return (0);\n}";
         QMessageBox::information(this, "", "Successful Generation !");
@@ -85,9 +83,8 @@ void mainWindow::html_generation()
     if(test_my_file)
         answer = QMessageBox::question(this, "", "this file already exist, if you continue it will be crushed, do you want to continue ? ", QMessageBox::Yes | QMessageBox::No);
 
-    ofstream my_file(complete_file_path.c_str());
-
-    if (my_file && answer != QMessageBox::No) {
+    if (answer != QMessageBox::No) {
+        ofstream my_file(complete_file_path.c_str());
         my_file << "<!DOCTYPE html>\n<html>\n<head>" << endl;
         my_file << "    <meta charset=\"utf-8\"/>" << endl;
         my_file << "    <link rel=\"stylesheet\" href=\"style.css\"/>" << endl;
@@ -115,9 +112,8 @@ void mainWindow::java_generation()
     if(test_my_file)
         answer = QMessageBox::question(this, "", "this file already exist, if you continue it will be crushed, do you want to continue ? ", QMessageBox::Yes | QMessageBox::No);
 
-    ofstream my_file(complete_file_path.c_str());
-
-    if (my_file && answer != QMessageBox::No ) {
+    if (answer != QMessageBox::No ) {
+        ofstream my_file(complete_file_path.c_str());
         my_file << "\npublic class " << convert_name_file << " {\n" << endl;
         my_file << "    public static void main(String[] args) {\n" << endl;
         my_file << "    }\n}";
@@ -143,9 +139,8 @@ void mainWindow::python_generation()
     if(test_my_file)
         answer = QMessageBox::question(this, "", "this file already exist, if you continue it will be crushed, do you want to continue ? ", QMessageBox::Yes | QMessageBox::No);
 
-    ofstream my_file(complete_file_path.c_str());
-
-    if(my_file && answer != QMessageBox::No) {
+    if(answer != QMessageBox::No) {
+        ofstream my_file(complete_file_path.c_str());
         my_file << "#!/usr/bin/python3.7\n#-*-coding:Utf-8 -*";
         QMessageBox::information(this, "", "Successful Generation !");
     }

@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QComboBox>
 #include <QLabel>
+#include <QTextEdit>
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -34,7 +35,6 @@ mainWindow::mainWindow() : QWidget()
     m_language->addItem("Html");
     m_language->addItem("Java");
     m_language->addItem("Python");
-
 
     m_hbox_path_file->addWidget(m_name_folder);
     m_hbox_path_file->addWidget(m_button_path_file);
