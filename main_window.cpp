@@ -28,7 +28,7 @@ mainWindow::mainWindow() : QWidget()
     m_generate = new QPushButton("Generate");
     m_leave = new QPushButton("Leave");
 
-    setWindowTitle ("File Template");
+    setWindowTitle("File Template");
     resize(500, 210);
     
     m_language->addItem("C");
